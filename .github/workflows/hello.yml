@@ -1,0 +1,21 @@
+
+name: Hello GitHub Actions
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Greet the runner
+        run: echo "Hello from GitHub Actions!"
+
+      - name: Show the current time
+        run: date -u
